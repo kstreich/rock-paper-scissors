@@ -2,19 +2,19 @@
 
 let choices = [
   {
-    name: "ROCK",
+    name: "Rock",
     id: 0,
     beats: 2,
     losesTo: 1
   },
   {
-    name: "PAPER",
+    name: "Paper",
     id: 1,
     beats: 0,
     losesTo: 2
   },
   {
-    name: "SCISSORS",
+    name: "Scissors",
     id: 2,
     beats: 1,
     losesTo: 0
@@ -24,24 +24,24 @@ function play(num) {
   //Generates a random choice from the PC
   let pcChoice = choices[Math.floor((Math.random() * 3))]
   let playerChoice = choices[num]
-  let result = `${playerChoice} vs ${pcChoice} =`
+  let result = `${playerChoice.name} vs ${pcChoice.name} =`
   if (playerChoice.name == pcChoice.name) {
-    result += "YOU TIED."
+    result += "You Tied."
   } else if (playerChoice.id == 0 && pcChoice.id == 1) {
-    result += "YOU LOSE."
+    result += "You Lose."
   } else if (playerChoice.id == 0 && pcChoice.id == 2) {
-    result += "YOU WIN."
+    result += "You Win."
   } else if (playerChoice.id == 1 && pcChoice.id == 0) {
-    result += "YOU WIN."
+    result += "You Win."
   } else if (playerChoice.id == 1 && pcChoice.id == 2) {
-    result += "You LOSE."
+    result += "You Lose."
   } else if (playerChoice.id == 2 && pcChoice.id == 0) {
-    result += "YOU LOSE."
+    result += "You Lose."
   } else if (playerChoice.id == 2 && pcChoice.id == 1) {
-    result += "YOU LOSE."
+    result += "You Win."
   }
-
-  document.getElementById()
+  /*document.getElementById("result").innerHTML = result*/
+  alert(result)
 }
 
 
