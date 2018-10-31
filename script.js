@@ -2,19 +2,19 @@
 
 let choices = [
   {
-    name: "Rock",
+    name: "rock",
     id: 0,
     beats: 2,
     losesTo: 1
   },
   {
-    name: "Paper",
+    name: "paper",
     id: 1,
     beats: 0,
     losesTo: 2
   },
   {
-    name: "Scissors",
+    name: "scissors",
     id: 2,
     beats: 1,
     losesTo: 0
@@ -24,7 +24,7 @@ function play(num) {
   //Generates a random choice from the PC
   let pcChoice = choices[Math.floor((Math.random() * 3))]
   let playerChoice = choices[num]
-  let result = `${playerChoice.name} vs ${pcChoice.name} =`
+  let result = `You chose ${playerChoice.name}. <br> The computer chose ${pcChoice.name}. <br>`
   if (playerChoice.name == pcChoice.name) {
     result += "You Tied."
   } else if (playerChoice.id == 0 && pcChoice.id == 1) {
@@ -40,8 +40,8 @@ function play(num) {
   } else if (playerChoice.id == 2 && pcChoice.id == 1) {
     result += "You Win."
   }
-  /*document.getElementById("result").innerHTML = result*/
-  alert(result)
+  document.getElementById("resultHTML").innerHTML = result
+  /*alert(result)*/
 }
 
 

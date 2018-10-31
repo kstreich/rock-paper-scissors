@@ -1,7 +1,25 @@
 
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: Poor Story;
+  background-color: beige
+}
 
 .buttonRow {
   display: flex;
   justify-content: center;
-   margin-top: 20vh;
+   margin-top: 10vh;
+}
+
+.result {
+  width: 15vh;
+  font-family: Poor Story;
+  background-color: rgb(140, 233, 233);
+}
+
+.resultsRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
 }
